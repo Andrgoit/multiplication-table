@@ -1,0 +1,14 @@
+.footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: 
+  /* linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.4)
+    ), */ url("/src/assets/img/footer-img.jpg");
+  background-size: cover;
+}
