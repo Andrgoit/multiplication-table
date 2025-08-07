@@ -3,10 +3,10 @@ import { useState } from "react";
 
 import "./App.css";
 import Layout from "./components/Layout/Layout";
-import { HomePage, NotFoundPage, LearningPage, TestPage } from "./pages";
+import { HomePage, NotFoundPage, LearningPage, TestPage } from "/src/pages";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <>

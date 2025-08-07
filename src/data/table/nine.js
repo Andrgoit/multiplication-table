@@ -2,52 +2,52 @@ const nine = [
   {
     id: "nine1",
     task: "9x1",
-    cerrectAnswer: 9,
+    correctAnswer: 9,
   },
   {
     id: "nine2",
     task: "9x2",
-    cerrectAnswer: 18,
+    correctAnswer: 18,
   },
   {
     id: "nine3",
     task: "9x3",
-    cerrectAnswer: 27,
+    correctAnswer: 27,
   },
   {
     id: "nine4",
     task: "9x4",
-    cerrectAnswer: 36,
+    correctAnswer: 36,
   },
   {
     id: "nine5",
     task: "9x5",
-    cerrectAnswer: 45,
+    correctAnswer: 45,
   },
   {
     id: "nine6",
     task: "9x6",
-    cerrectAnswer: 54,
+    correctAnswer: 54,
   },
   {
     id: "nine7",
     task: "9x7",
-    cerrectAnswer: 63,
+    correctAnswer: 63,
   },
   {
     id: "nine9",
     task: "9x8",
-    cerrectAnswer: 72,
+    correctAnswer: 72,
   },
   {
     id: "nine9",
     task: "9x9",
-    cerrectAnswer: 81,
+    correctAnswer: 81,
   },
   {
     id: "nine10",
     task: "9x10",
-    cerrectAnswer: 90,
+    correctAnswer: 90,
   },
 ];
 

@@ -2,52 +2,52 @@ const six = [
   {
     id: "six1",
     task: "6x1",
-    cerrectAnswer: 6,
+    correctAnswer: 6,
   },
   {
     id: "six2",
     task: "6x2",
-    cerrectAnswer: 12,
+    correctAnswer: 12,
   },
   {
     id: "six3",
     task: "6x3",
-    cerrectAnswer: 18,
+    correctAnswer: 18,
   },
   {
     id: "six4",
     task: "6x4",
-    cerrectAnswer: 24,
+    correctAnswer: 24,
   },
   {
     id: "six6",
     task: "6x5",
-    cerrectAnswer: 30,
+    correctAnswer: 30,
   },
   {
     id: "six6",
     task: "6x6",
-    cerrectAnswer: 36,
+    correctAnswer: 36,
   },
   {
     id: "six7",
     task: "6x7",
-    cerrectAnswer: 42,
+    correctAnswer: 42,
   },
   {
     id: "six8",
     task: "6x8",
-    cerrectAnswer: 48,
+    correctAnswer: 48,
   },
   {
     id: "six9",
     task: "6x9",
-    cerrectAnswer: 54,
+    correctAnswer: 54,
   },
   {
     id: "six10",
     task: "6x10",
-    cerrectAnswer: 60,
+    correctAnswer: 60,
   },
 ];
 
