@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { SettingsTestPage, Testing } from "../../components";
+import { SettingsTestPage, Testing } from "src/components";
 
 import {
   one,

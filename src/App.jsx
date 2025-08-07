@@ -1,13 +1,9 @@
 import { Routes, Route } from "react-router";
-import { useState } from "react";
-
+import Layout from "src/components";
+import { HomePage, NotFoundPage, LearningPage, TestPage } from "src/pages";
 import "./App.css";
-import Layout from "./components/Layout/Layout";
-import { HomePage, NotFoundPage, LearningPage, TestPage } from "/src/pages";
 
 function App() {
-  // const [count, setCount] = useState(0);
-
   return (
     <>
       <Routes>

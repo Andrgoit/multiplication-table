@@ -24,6 +24,7 @@ export default function Task({ test = {}, wrongChoice, correctChoice }) {
     if (Object.keys(test).length > 0) {
       createRandomAnswer();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [correctAnswer, test]);
 
   const elements = randomeAnswers.map((btn) => (
@@ -33,7 +34,7 @@ export default function Task({ test = {}, wrongChoice, correctChoice }) {
   ));
 
   const choiceHandler = (number) => {
-    if (number == correctAnswer) {
+    if (number === correctAnswer) {
       correctChoice();
     } else {
       wrongChoice();

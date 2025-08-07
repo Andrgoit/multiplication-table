@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { Task } from "/src/components";
+import { useState } from "react";
+import { Task } from "src/components";
 
-import style from "./Testing.module.css";
+// import style from "./Testing.module.css";
 
 export default function Testing({ numbers, maxRandomNumber }) {
   const [testsCount, setTestsCount] = useState(0);
