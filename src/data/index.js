@@ -9,6 +9,6 @@ import eight from "./table/eight.js";
 import nine from "./table/nine.js";
 import ten from "./table/ten";
 
-import navItems from "./NavItems.js";
+import navItems from "./navItems.js";
 
 export { one, two, tree, four, five, six, seven, eight, nine, ten, navItems };

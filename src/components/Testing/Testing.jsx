@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Task } from "@/components";
 import { toast } from "react-toastify";
 import useSound from "use-sound";
