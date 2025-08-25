@@ -1,14 +1,40 @@
-import { useState } from "react";
-import { Task } from "src/components";
+import { useEffect, useState } from "react";
+import { Task } from "@/components";
+import { toast } from "react-toastify";
+import useSound from "use-sound";
 
-// import style from "./Testing.module.css";
+import correct from "@/assets/audio/correct1.mp3";
+import wrong from "@/assets/audio/wrong1.mp3";
 
-export default function Testing({ numbers, maxRandomNumber }) {
+// import styles from "./Testing.module.css";
+
+export default function Testing({ numbers, maxRandomNumber, back }) {
   const [testsCount, setTestsCount] = useState(0);
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
+  const [isSoundOn, setIsSoundOn] = useState(true);
   const percentCorrectAnswers = Math.ceil(
     (correctAnswerCount / testsCount) * 100
   );
+
+  const [playCorrect] = useSound(correct);
+  const [playWrong] = useSound(wrong);
+
+  // const getLocalStorageSettings = () => {
+  //   try {
+  //     const soundSetting = localStorage.getItem("notification-sound");
+  //     setIsSoundOn(soundSetting === "true");
+  //   } catch (error) {
+  //     console.log("error", error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("storage", getLocalStorageSettings);
+
+  //   getLocalStorageSettings();
+
+  //   return () => window.removeEventListener("storage", getLocalStorageSettings);
+  // }, []);
 
   const randomeIdx = () => {
     const minRandomNumber = 1;
@@ -17,19 +43,21 @@ export default function Testing({ numbers, maxRandomNumber }) {
     );
   };
 
-  const test = numbers[randomeIdx() - 1];
-  // console.log("numbers", numbers);
+  console.log("isSoundOn", isSoundOn);
 
-  console.log("randomeIdx()", randomeIdx());
-  // console.log("test", test);
+  const test = numbers[randomeIdx() - 1];
 
   const correctChoice = () => {
+    playCorrect();
     setTestsCount((prev) => prev + 1);
     setCorrectAnswerCount((prev) => prev + 1);
+    toast.success("Правильно! Молодец!");
   };
 
   const wrongChoice = () => {
+    playWrong();
     setTestsCount((prev) => prev + 1);
+    toast.error("Ошибся! :(");
   };
 
   return (
@@ -41,7 +69,7 @@ export default function Testing({ numbers, maxRandomNumber }) {
           <p>Количество правильных ответов:{correctAnswerCount}</p>
           <p>
             Процент правильных ответов:
-            {percentCorrectAnswers ? percentCorrectAnswers : 0}
+            {percentCorrectAnswers ? percentCorrectAnswers : 0}%
           </p>
         </div>
         <div>
@@ -52,6 +80,7 @@ export default function Testing({ numbers, maxRandomNumber }) {
             wrongChoice={wrongChoice}
           />
         </div>
+        <button onClick={back}>Назад</button>
       </div>
     </div>
   );

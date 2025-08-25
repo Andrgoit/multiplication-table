@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { SettingsTestPage, Testing } from "src/components";
+import { SettingsTestPage, Testing } from "@/components";
 
 import {
   one,
@@ -12,7 +12,7 @@ import {
   eight,
   nine,
   ten,
-} from "../../data";
+} from "@/data";
 
 const numbersObject = {
   1: one,
@@ -34,7 +34,6 @@ export default function TestPage() {
 
   const concatArrays = (numbers) => {
     let newArray = [];
-    console.log("newArray", newArray);
     for (const number of numbers) {
       newArray = [...newArray, ...numbersObject[number]];
     }
@@ -50,16 +49,20 @@ export default function TestPage() {
   const settingsHandler = (settings) => {
     setSettings(settings);
   };
-  // console.log("table", table);
-  // console.log("maxRandomNumber", maxRandomNumber);
-  // console.log("settings", settings);
+  const backButtonHandler = () => {
+    setSettings([]);
+  };
 
   return (
     <div className="container">
       {settings.length < 1 ? (
         <SettingsTestPage settingsHandler={settingsHandler} />
       ) : (
-        <Testing numbers={table} maxRandomNumber={maxRandomNumber} />
+        <Testing
+          numbers={table}
+          maxRandomNumber={maxRandomNumber}
+          back={backButtonHandler}
+        />
       )}
     </div>
   );

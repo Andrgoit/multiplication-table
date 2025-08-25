@@ -11,4 +11,5 @@
       rgba(255, 255, 255, 0.4)
     ), */ url("/src/assets/img/footer-img.jpg");
   background-size: cover;
+  color: black;
 }

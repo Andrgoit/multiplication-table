@@ -8,7 +8,6 @@ export default function Task({ test = {}, wrongChoice, correctChoice }) {
     const answers = new Set();
     answers.add(correctAnswer);
     const currentNumber = Number(task.split("x")[0]);
-    // console.log("currentNumber", currentNumber);
     setrandomeAnswers([]);
 
     while (answers.size < 5) {
@@ -45,7 +44,7 @@ export default function Task({ test = {}, wrongChoice, correctChoice }) {
 
   return (
     <div>
-      {task}
+      {task}=
       <div>
         <ul>{elements}</ul>
       </div>

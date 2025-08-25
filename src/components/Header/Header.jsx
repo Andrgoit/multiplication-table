@@ -1,12 +1,13 @@
-import Nav from "../Nav/Nav";
-import style from "./Header.module.css";
-import { navItems } from "../../data";
+import { Nav, SoundButton } from "@/components";
+import styles from "./Header.module.css";
+import { navItems } from "@/data";
 
 export default function Header() {
   return (
-    <header className={style.header}>
-      <div className={style.container}>
+    <header className={styles.header}>
+      <div className={styles.container}>
         <Nav navItems={navItems} />
+        <SoundButton />
       </div>
     </header>
   );

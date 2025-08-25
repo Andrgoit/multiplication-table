@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "./SettingsTestPage.module.css";
+import styles from "./SettingsTestPage.module.css";
 
 export default function SettingsTestPage({ settingsHandler }) {
   const [checkedNumbers, setCheckedNumbers] = useState([]);
@@ -37,7 +37,7 @@ export default function SettingsTestPage({ settingsHandler }) {
   return (
     <div>
       <div>
-        <h2 className={style.title}>Настройки</h2>
+        <h2 className={styles.title}>Настройки</h2>
         <p>Выберите необходимые столбцы таблицы:</p>
       </div>
       <form action="" onSubmit={submitHandler}>

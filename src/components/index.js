@@ -5,5 +5,15 @@ import Nav from "./Nav/Nav";
 import SettingsTestPage from "./SettingsTestaPge/SettingsTestPage";
 import Testing from "./Testing/Testing";
 import Task from "./Task/Task";
+import SoundButton from "./SoundButton/SoundButton";
 
-export { Footer, Header, Layout, Nav, SettingsTestPage, Testing, Task };
+export {
+  Footer,
+  Header,
+  Layout,
+  Nav,
+  SettingsTestPage,
+  Testing,
+  Task,
+  SoundButton,
+};
