@@ -1,4 +1,4 @@
-import { Volume2, VolumeX } from "lucide-react";
+import { BiVolumeFull, BiVolumeMute } from "react-icons/bi";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import styles from "./SoundButton.module.css";
@@ -31,7 +31,7 @@ export default function SoundButton() {
 
   return (
     <div onClick={soundToggler} className={styles.container}>
-      {isSoundOn ? <Volume2 /> : <VolumeX />}
+      {isSoundOn ? <BiVolumeFull size={26} /> : <BiVolumeMute size={26} />}
     </div>
   );
 }

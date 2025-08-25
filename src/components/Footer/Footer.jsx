@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Github />
+        <FaGithub size={26} />
       </a>
     </footer>
   );

@@ -35,7 +35,7 @@ const nine = [
     correctAnswer: 63,
   },
   {
-    id: "nine9",
+    id: "nine8",
     task: "9x8",
     correctAnswer: 72,
   },

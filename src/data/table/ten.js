@@ -35,12 +35,12 @@ const ten = [
     correctAnswer: 70,
   },
   {
-    id: "ten10",
+    id: "ten8",
     task: "10x8",
     correctAnswer: 80,
   },
   {
-    id: "ten10",
+    id: "ten9",
     task: "10x9",
     correctAnswer: 90,
   },

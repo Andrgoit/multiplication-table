@@ -20,7 +20,7 @@ const six = [
     correctAnswer: 24,
   },
   {
-    id: "six6",
+    id: "six5",
     task: "6x5",
     correctAnswer: 30,
   },
