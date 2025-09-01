@@ -6,7 +6,7 @@ import useSound from "use-sound";
 import correct from "@/assets/audio/correct1.mp3";
 import wrong from "@/assets/audio/wrong1.mp3";
 
-// import styles from "./Testing.module.css";
+import styles from "./Testing.module.css";
 
 export default function Testing({ numbers, maxRandomNumber, back }) {
   const [testsCount, setTestsCount] = useState(0);
@@ -61,27 +61,27 @@ export default function Testing({ numbers, maxRandomNumber, back }) {
   };
 
   return (
-    <div>
-      <div>
-        <div>
-          <h2>Статистика:</h2>
-          <p>Количество вопросов:{testsCount}</p>
-          <p>Количество правильных ответов:{correctAnswerCount}</p>
-          <p>
-            Процент правильных ответов:
-            {percentCorrectAnswers ? percentCorrectAnswers : 0}%
-          </p>
-        </div>
-        <div>
-          <h2>Выберите правильный ответ</h2>
-          <Task
-            test={test}
-            correctChoice={correctChoice}
-            wrongChoice={wrongChoice}
-          />
-        </div>
-        <button onClick={back}>Назад</button>
+    <div className={styles.wrapper}>
+      <div className={styles.textBlock}>
+        <h2 className={styles.title}>Статистика:</h2>
+        <p>Количество вопросов:{testsCount}</p>
+        <p>Количество правильных ответов:{correctAnswerCount}</p>
+        <p>
+          Процент правильных ответов:
+          {percentCorrectAnswers ? percentCorrectAnswers : 0}%
+        </p>
       </div>
+      <div className={styles.textBlock}>
+        <h2 className={styles.title}>Выберите правильный ответ</h2>
+        <Task
+          test={test}
+          correctChoice={correctChoice}
+          wrongChoice={wrongChoice}
+        />
+      </div>
+      <button onClick={back} className={styles.button}>
+        Назад
+      </button>
     </div>
   );
 }

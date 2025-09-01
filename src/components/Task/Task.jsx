@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./Task.module.css";
 
 export default function Task({ test = {}, wrongChoice, correctChoice }) {
   const { task, correctAnswer } = test;
@@ -28,7 +29,12 @@ export default function Task({ test = {}, wrongChoice, correctChoice }) {
 
   const elements = randomeAnswers.map((btn) => (
     <li key={btn}>
-      <button onClick={() => choiceHandler(btn)}>{btn}</button>
+      <button
+        onClick={() => choiceHandler(btn)}
+        className={styles.answerButton}
+      >
+        {btn}
+      </button>
     </li>
   ));
 
@@ -40,13 +46,13 @@ export default function Task({ test = {}, wrongChoice, correctChoice }) {
     }
   };
 
-  // console.log("randomeAnswers", randomeAnswers);
-
   return (
-    <div>
-      {task}=
+    <div className={styles.wrapper}>
+      <div className={styles.task}>
+        <span>{task}</span>=<span className={styles.answerFeeld}>?</span>
+      </div>
       <div>
-        <ul>{elements}</ul>
+        <ul className={styles.list}>{elements}</ul>
       </div>
     </div>
   );
