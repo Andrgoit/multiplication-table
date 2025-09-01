@@ -8,6 +8,7 @@ import Task from "./Task/Task";
 import SoundButton from "./SoundButton/SoundButton";
 import SettingsLearningPage from "./SettingsLearningPage/SettingsLearningPage";
 import Learning from "./Learning/Learning";
+import VideoBlock from "./VideoBlock/VideoBlock";
 
 export {
   Footer,
@@ -20,4 +21,5 @@ export {
   SoundButton,
   SettingsLearningPage,
   Learning,
+  VideoBlock,
 };

@@ -10,5 +10,19 @@ import nine from "./table/nine.js";
 import ten from "./table/ten";
 
 import navItems from "./navItems.js";
+import homePageVideos from "./homePageVideos.js";
 
-export { one, two, tree, four, five, six, seven, eight, nine, ten, navItems };
+export {
+  one,
+  two,
+  tree,
+  four,
+  five,
+  six,
+  seven,
+  eight,
+  nine,
+  ten,
+  navItems,
+  homePageVideos,
+};
