@@ -5,9 +5,11 @@ import { navItems } from "@/data";
 export default function Header() {
   return (
     <header className={styles.header}>
-      <div className={styles.container}>
-        <Nav navItems={navItems} />
-        <SoundButton />
+      <div className="container">
+        <div className={styles.wrapper}>
+          <Nav navItems={navItems} />
+          <SoundButton />
+        </div>
       </div>
     </header>
   );

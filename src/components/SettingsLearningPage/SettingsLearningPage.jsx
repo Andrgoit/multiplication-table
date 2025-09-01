@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Select from "react-select";
 
+import styles from "./SettingsLearningPage.module.css";
+
 const options = [
   { value: "1", label: "столбец на 1" },
   { value: "2", label: "столбец на 2" },
@@ -21,14 +23,15 @@ export default function SettingsLearningPage({ selecedNumber }) {
     selecedNumber(selectedOption);
   }, [selectedOption]);
   return (
-    <div>
-      <h2>Настройки:</h2>
-      <p>Выберите столбец, который хотите учить.</p>
+    <div className={styles.container}>
+      <h2 className={styles.title}>Настройки:</h2>
+      <p>Выберите столбец, который хотите учить:</p>
       <Select
         options={options}
         defaultValue={selectedOption}
         onChange={setSelectedOption}
         placeholder="Выберите столбец..."
+        className={styles.select}
       />
     </div>
   );
