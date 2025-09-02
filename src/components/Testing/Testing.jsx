@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Task } from "@/components";
 import { toast } from "react-toastify";
+
+import { useContext } from "react";
+import soundContext from "@/contexts/sound/context";
+
 import useSound from "use-sound";
 
 import correct from "@/assets/audio/correct1.mp3";
@@ -11,30 +15,14 @@ import styles from "./Testing.module.css";
 export default function Testing({ numbers, maxRandomNumber, back }) {
   const [testsCount, setTestsCount] = useState(0);
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
-  const [isSoundOn, setIsSoundOn] = useState(true);
+  const { isSoundOn } = useContext(soundContext);
+
   const percentCorrectAnswers = Math.ceil(
     (correctAnswerCount / testsCount) * 100
   );
 
   const [playCorrect] = useSound(correct);
   const [playWrong] = useSound(wrong);
-
-  // const getLocalStorageSettings = () => {
-  //   try {
-  //     const soundSetting = localStorage.getItem("notification-sound");
-  //     setIsSoundOn(soundSetting === "true");
-  //   } catch (error) {
-  //     console.log("error", error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("storage", getLocalStorageSettings);
-
-  //   getLocalStorageSettings();
-
-  //   return () => window.removeEventListener("storage", getLocalStorageSettings);
-  // }, []);
 
   const randomeIdx = () => {
     const minRandomNumber = 1;
@@ -43,19 +31,22 @@ export default function Testing({ numbers, maxRandomNumber, back }) {
     );
   };
 
-  console.log("isSoundOn", isSoundOn);
-
   const test = numbers[randomeIdx() - 1];
 
   const correctChoice = () => {
-    playCorrect();
+    if (isSoundOn) {
+      playCorrect();
+    }
     setTestsCount((prev) => prev + 1);
     setCorrectAnswerCount((prev) => prev + 1);
     toast.success("Правильно! Молодец!");
   };
 
   const wrongChoice = () => {
-    playWrong();
+    if (isSoundOn) {
+      playWrong();
+    }
+
     setTestsCount((prev) => prev + 1);
     toast.error("Ошибся! :(");
   };

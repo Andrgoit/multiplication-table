@@ -1,33 +1,11 @@
 import { BiVolumeFull, BiVolumeMute } from "react-icons/bi";
-import { useEffect, useState } from "react";
-import { toast } from "react-toastify";
+import { useContext } from "react";
+import soundContext from "@/contexts/sound/context";
+
 import styles from "./SoundButton.module.css";
 
 export default function SoundButton() {
-  const [isSoundOn, setIsSoundOn] = useState(false);
-
-  useEffect(() => {
-    const soundSetting = localStorage.getItem("notification-sound");
-    try {
-      if (soundSetting) {
-        setIsSoundOn(soundSetting);
-      } else {
-        localStorage.setItem("notification-sound", false);
-      }
-    } catch (error) {
-      console.log("Sound settings is not found!");
-      console.log("error", error);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("notification-sound", isSoundOn);
-  }, [isSoundOn]);
-
-  const soundToggler = () => {
-    setIsSoundOn((prev) => !prev);
-    toast.info(`Звуковые эффекты - ${isSoundOn ? "выключены" : "включены"}`);
-  };
+  const { isSoundOn, soundToggler } = useContext(soundContext);
 
   return (
     <div onClick={soundToggler} className={styles.container}>

@@ -22,6 +22,7 @@
   border: 1px solid transparent;
   border-radius: 5px;
   background-color: white;
+  cursor: help;
 }
 
 .list {
@@ -43,4 +44,10 @@
   border: 1px solid transparent;
   border-radius: 5px;
   background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.answerButton:hover {
+  background-color: rgb(230, 227, 227);
 }
