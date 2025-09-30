@@ -27,17 +27,6 @@ export default function Task({ test = {}, wrongChoice, correctChoice }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [correctAnswer, test]);
 
-  const elements = randomeAnswers.map((btn) => (
-    <li key={btn}>
-      <button
-        onClick={() => choiceHandler(btn)}
-        className={styles.answerButton}
-      >
-        {btn}
-      </button>
-    </li>
-  ));
-
   const choiceHandler = (number) => {
     if (number === correctAnswer) {
       correctChoice();
@@ -45,6 +34,18 @@ export default function Task({ test = {}, wrongChoice, correctChoice }) {
       wrongChoice();
     }
   };
+  const elements = randomeAnswers.map((btn) => (
+    <li key={btn}>
+      <button
+        onClick={() => {
+          choiceHandler(btn);
+        }}
+        className={styles.answerButton}
+      >
+        {btn}
+      </button>
+    </li>
+  ));
 
   return (
     <div className={styles.wrapper}>

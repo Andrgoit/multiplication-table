@@ -40,7 +40,7 @@ export default function SettingsTestPage({ settingsHandler }) {
       <h2 className={styles.title}>Настройки:</h2>
       <p className={styles.text}>Выберите необходимые столбцы таблицы:</p>
 
-      <form action="" onSubmit={submitHandler} className={styles.form}>
+      <form onSubmit={submitHandler} className={styles.form}>
         <div>
           <div className={styles.column}>
             <label>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import SoundContext from "./context";
 import { toast } from "react-toastify";
 
@@ -31,10 +31,10 @@ export default function Provider({ children }) {
     });
   };
 
-  const soundProviderValue = {
-    isSoundOn,
-    soundToggler,
-  };
+  const soundProviderValue = useMemo(() => {
+    return { isSoundOn, soundToggler };
+  }, [isSoundOn]);
+
   return (
     <SoundContext.Provider value={soundProviderValue}>
       {children}

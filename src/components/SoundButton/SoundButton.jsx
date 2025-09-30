@@ -9,7 +9,11 @@ export default function SoundButton() {
 
   return (
     <div onClick={soundToggler} className={styles.container}>
-      {isSoundOn ? <BiVolumeFull size={26} /> : <BiVolumeMute size={26} />}
+      {isSoundOn ? (
+        <BiVolumeFull size={26} color="#00da00" />
+      ) : (
+        <BiVolumeMute size={26} />
+      )}
     </div>
   );
 }

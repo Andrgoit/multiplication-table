@@ -6,6 +6,7 @@
 }
 
 .task {
+  font-size: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,8 +17,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 27px;
-  min-width: 27px;
+  min-height: 48px;
+  min-width: 48px;
+  font-size: 30px;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
   border: 1px solid transparent;
   border-radius: 5px;
@@ -32,22 +34,18 @@
   gap: 10px;
 }
 
-.item {
-}
 .answerButton {
-  min-width: 27px;
+  font-size: 30px;
+  min-width: 48px;
+  min-height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5px;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
   border: 1px solid transparent;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: white;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-}
-
-.answerButton:hover {
-  background-color: rgb(230, 227, 227);
 }

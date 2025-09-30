@@ -3,7 +3,7 @@ import styles from "./Learning.module.css";
 export default function Learning({ selectedTable, back }) {
   const elements = selectedTable.map(({ id, task, correctAnswer }) => (
     <li key={id} className={styles.item}>
-      <span>{task}=</span>
+      <span>{task} =</span>
       <span>{correctAnswer}</span>
     </li>
   ));
