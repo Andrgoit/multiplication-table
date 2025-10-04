@@ -51,7 +51,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 name="number"
                 onChange={checkboxHandler}
               />
-              на 1
+              <span>на 1</span>
             </label>
             <label>
               <input
@@ -61,7 +61,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={2}
                 onChange={checkboxHandler}
               />
-              на 2
+              <span>на 2</span>
             </label>
             <label>
               <input
@@ -71,7 +71,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={3}
                 onChange={checkboxHandler}
               />
-              на 3
+              <span>на 3</span>
             </label>
             <label>
               <input
@@ -81,7 +81,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={4}
                 onChange={checkboxHandler}
               />
-              на 4
+              <span>на 4</span>
             </label>
             <label>
               <input
@@ -91,7 +91,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={5}
                 onChange={checkboxHandler}
               />
-              на 5
+              <span>на 5</span>
             </label>
           </div>
           <div className={styles.column}>
@@ -103,7 +103,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={6}
                 onChange={checkboxHandler}
               />
-              на 6
+              <span>на 6</span>
             </label>
             <label>
               <input
@@ -113,7 +113,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={7}
                 onChange={checkboxHandler}
               />
-              на 7
+              <span>на 7</span>
             </label>
             <label>
               <input
@@ -123,7 +123,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={8}
                 onChange={checkboxHandler}
               />
-              на 8
+              <span>на 8</span>
             </label>
             <label>
               <input
@@ -133,7 +133,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={9}
                 onChange={checkboxHandler}
               />
-              на 9
+              <span>на 9</span>
             </label>
             <label>
               <input
@@ -143,7 +143,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={10}
                 onChange={checkboxHandler}
               />
-              на 10
+              <span>на 10</span>
             </label>
           </div>
         </div>
@@ -155,7 +155,7 @@ export default function SettingsTestPage({ settingsHandler }) {
             value="all"
             onChange={allCheckboxHandler}
           />
-          {isAllChacked ? "Снять все" : "Выбрать все"}
+          <span>{isAllChacked ? "Снять все" : "Выбрать все"}</span>
         </label>
 
         <button
