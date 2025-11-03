@@ -19,6 +19,17 @@ const options = [
 export default function SettingsLearningPage({ selecedNumber }) {
   const [selectedOption, setSelectedOption] = useState(null);
 
+  const elements = options.map(({ value, label }) => (
+    <li key={value}>
+      <button
+        onClick={() => setSelectedOption(value)}
+        className={styles.button}
+      >
+        {label}
+      </button>
+    </li>
+  ));
+
   useEffect(() => {
     selecedNumber(selectedOption);
   }, [selectedOption]);
@@ -26,13 +37,8 @@ export default function SettingsLearningPage({ selecedNumber }) {
     <div className={styles.container}>
       <h2 className={styles.title}>Настройки:</h2>
       <p>Выберите столбец, который хотите учить:</p>
-      <Select
-        options={options}
-        defaultValue={selectedOption}
-        onChange={setSelectedOption}
-        placeholder="Выберите столбец..."
-        className={styles.select}
-      />
+
+      <ul className={styles.list}>{elements}</ul>
     </div>
   );
 }

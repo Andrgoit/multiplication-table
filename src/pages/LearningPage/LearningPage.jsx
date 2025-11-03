@@ -31,7 +31,7 @@ export default function LearningPage() {
 
   const selecedNumberHandler = (obj) => {
     if (obj) {
-      setSelectedTable(numbersObject[obj?.value]);
+      setSelectedTable(numbersObject[obj]);
     }
     return;
   };

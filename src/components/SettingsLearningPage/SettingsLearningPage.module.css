@@ -12,9 +12,26 @@
   font-size: 18px;
 }
 
-.select {
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.button {
   width: 100%;
   max-width: 480px;
-  text-align: center;
+  font-size: 16px;
+  padding: 3px;
+  cursor: pointer;
+  border: 1px solid #ecebeb;
+  border-radius: 3px;
+  background-color: white;
+  transition: background-color 0.3s ease-in-out;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.button:hover {
+  background-color: rgb(230, 227, 227);
 }
