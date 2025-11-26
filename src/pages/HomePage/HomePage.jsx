@@ -1,9 +1,15 @@
+import { motion } from "motion/react";
 import { VideoBlock } from "@/components";
 import styles from "./HomePage.module.css";
 
 export default function HomePage() {
   return (
-    <div className="container">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className="container"
+    >
       <h1 className={styles.title}>
         Добро пожаловать на сайт, посвященный таблице умножения!
       </h1>
@@ -13,6 +19,6 @@ export default function HomePage() {
         Возможо они помогут Вам упростить процесс изучения таблицы умножения.
       </p>
       <VideoBlock />
-    </div>
+    </motion.div>
   );
 }

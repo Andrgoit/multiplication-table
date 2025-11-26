@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { useState } from "react";
 import { Task } from "@/components";
 import { toast } from "react-toastify";
@@ -52,7 +53,12 @@ export default function Testing({ numbers, maxRandomNumber, back }) {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className={styles.wrapper}
+    >
       <div className={styles.textBlock}>
         <h2 className={styles.title}>Статистика:</h2>
         <p>Количество вопросов:{testsCount}</p>
@@ -73,6 +79,6 @@ export default function Testing({ numbers, maxRandomNumber, back }) {
       <button onClick={back} className={styles.button}>
         Назад
       </button>
-    </div>
+    </motion.div>
   );
 }

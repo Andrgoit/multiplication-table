@@ -1,0 +1,24 @@
+.list {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  /* box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6); */
+  filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.6));
+}
+.icon {
+  filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.6));
+}
+
+.wrapper {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  cursor: pointer;
+}

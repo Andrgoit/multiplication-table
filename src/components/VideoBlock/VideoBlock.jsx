@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import ReactPlayer from "react-player";
 import { homePageVideos } from "@/data";
 import playIcon from "@/assets/img/playButton.png";
@@ -6,7 +7,13 @@ import styles from "./VideoBlock.module.css";
 
 export default function VideoBlock() {
   const elements = homePageVideos.map((video) => (
-    <li key={video} className={styles.item}>
+    <motion.li
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, delay: 0.3 }}
+      key={video}
+      className={styles.item}
+    >
       <ReactPlayer
         light
         src={video}
@@ -16,7 +23,7 @@ export default function VideoBlock() {
         playing
         controls
       />
-    </li>
+    </motion.li>
   ));
 
   return <ul className={styles.list}>{elements}</ul>;

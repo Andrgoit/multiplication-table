@@ -11,6 +11,7 @@ import ten from "./table/ten";
 
 import navItems from "./navItems.js";
 import homePageVideos from "./homePageVideos.js";
+import langIcons from "@/data/langIcons";
 
 export {
   one,
@@ -25,4 +26,5 @@ export {
   ten,
   navItems,
   homePageVideos,
+  langIcons,
 };

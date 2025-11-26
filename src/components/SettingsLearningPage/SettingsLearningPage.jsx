@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 import styles from "./SettingsLearningPage.module.css";
 
@@ -33,11 +34,16 @@ export default function SettingsLearningPage({ selecedNumber }) {
     selecedNumber(selectedOption);
   }, [selectedOption]);
   return (
-    <div className={styles.container}>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className={styles.container}
+    >
       <h2 className={styles.title}>Настройки:</h2>
       <p>Выберите столбец, который хотите учить:</p>
 
       <ul className={styles.list}>{elements}</ul>
-    </div>
+    </motion.div>
   );
 }

@@ -1,16 +1,25 @@
-import { Nav, SoundButton } from "@/components";
+import { motion } from "motion/react";
+import { Nav, SoundButton, ChangeLangBtn } from "@/components";
 import styles from "./Header.module.css";
 import { navItems } from "@/data";
 
 export default function Header() {
   return (
-    <header className={styles.header}>
+    <motion.header
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.5 }}
+      className={styles.header}
+    >
       <div className="container">
         <div className={styles.wrapper}>
           <Nav navItems={navItems} />
-          <SoundButton />
+          <div className={styles.btnwrapper}>
+            <SoundButton />
+            <ChangeLangBtn />
+          </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

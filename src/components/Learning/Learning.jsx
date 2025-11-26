@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import styles from "./Learning.module.css";
 
 export default function Learning({ selectedTable, back }) {
@@ -9,11 +10,16 @@ export default function Learning({ selectedTable, back }) {
   ));
 
   return (
-    <div className={styles.container}>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className={styles.container}
+    >
       <ul className={styles.list}>{elements}</ul>
       <button onClick={back} className={styles.button}>
         Назад
       </button>
-    </div>
+    </motion.div>
   );
 }

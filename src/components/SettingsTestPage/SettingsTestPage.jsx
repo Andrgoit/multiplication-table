@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { useState } from "react";
 import styles from "./SettingsTestPage.module.css";
 
@@ -36,7 +37,12 @@ export default function SettingsTestPage({ settingsHandler }) {
   };
 
   return (
-    <div className={styles.container}>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className={styles.container}
+    >
       <h2 className={styles.title}>Настройки:</h2>
       <p className={styles.text}>Выберите необходимые столбцы таблицы:</p>
 
@@ -167,6 +173,6 @@ export default function SettingsTestPage({ settingsHandler }) {
           Начать
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 }
