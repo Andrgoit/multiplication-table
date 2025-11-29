@@ -1,7 +1,9 @@
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 import styles from "./Learning.module.css";
 
 export default function Learning({ selectedTable, back }) {
+  const { t } = useTranslation();
   const elements = selectedTable.map(({ id, task, correctAnswer }) => (
     <li key={id} className={styles.item}>
       <span>{task} =</span>
@@ -18,7 +20,7 @@ export default function Learning({ selectedTable, back }) {
     >
       <ul className={styles.list}>{elements}</ul>
       <button onClick={back} className={styles.button}>
-        Назад
+        {t("back")}
       </button>
     </motion.div>
   );

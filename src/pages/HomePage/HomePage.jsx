@@ -1,8 +1,10 @@
 import { motion } from "motion/react";
 import { VideoBlock } from "@/components";
 import styles from "./HomePage.module.css";
+import { useTranslation } from "react-i18next";
 
 export default function HomePage() {
+  const { t } = useTranslation();
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -10,14 +12,8 @@ export default function HomePage() {
       transition={{ duration: 0.5 }}
       className="container"
     >
-      <h1 className={styles.title}>
-        Добро пожаловать на сайт, посвященный таблице умножения!
-      </h1>
-      <p className={styles.text}>
-        Изучение таблицы умножения - это важный этап в обучении ребенка. Перед
-        тем, как приступить к изучению, посмотрите видеоролики с рекомендациями.
-        Возможо они помогут Вам упростить процесс изучения таблицы умножения.
-      </p>
+      <h1 className={styles.title}>{t("homePage.title")}</h1>
+      <p className={styles.text}>{t("homePage.text")}</p>
       <VideoBlock />
     </motion.div>
   );

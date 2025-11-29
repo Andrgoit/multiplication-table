@@ -12,11 +12,13 @@ import correct from "@/assets/audio/correct1.mp3";
 import wrong from "@/assets/audio/wrong1.mp3";
 
 import styles from "./Testing.module.css";
+import { useTranslation } from "react-i18next";
 
 export default function Testing({ numbers, maxRandomNumber, back }) {
   const [testsCount, setTestsCount] = useState(0);
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
   const { isSoundOn } = useContext(soundContext);
+  const { t } = useTranslation();
 
   const percentCorrectAnswers = Math.ceil(
     (correctAnswerCount / testsCount) * 100
@@ -40,16 +42,18 @@ export default function Testing({ numbers, maxRandomNumber, back }) {
     }
     setTestsCount((prev) => prev + 1);
     setCorrectAnswerCount((prev) => prev + 1);
-    toast.success("Правильно! Молодец!");
+    toast.success(t("testPage.testing.correct"));
   };
 
-  const wrongChoice = () => {
+  const wrongChoice = (correctAnswer) => {
     if (isSoundOn) {
       playWrong();
     }
 
     setTestsCount((prev) => prev + 1);
-    toast.error("Ошибся! :(");
+    toast.error(t("testPage.testing.incorrect", { correctAnswer }), {
+      autoClose: false,
+    });
   };
 
   return (
@@ -60,16 +64,20 @@ export default function Testing({ numbers, maxRandomNumber, back }) {
       className={styles.wrapper}
     >
       <div className={styles.textBlock}>
-        <h2 className={styles.title}>Статистика:</h2>
-        <p>Количество вопросов:{testsCount}</p>
-        <p>Количество правильных ответов:{correctAnswerCount}</p>
+        <h2 className={styles.title}>{t("testPage.testing.stat")}:</h2>
         <p>
-          Процент правильных ответов:
+          {t("testPage.testing.countQuestions")}:{testsCount}
+        </p>
+        <p>
+          {t("testPage.testing.countAnswers")}:{correctAnswerCount}
+        </p>
+        <p>
+          {t("testPage.testing.countPercents")}:
           {percentCorrectAnswers ? percentCorrectAnswers : 0}%
         </p>
       </div>
       <div className={styles.textBlock}>
-        <h2 className={styles.title}>Выберите правильный ответ</h2>
+        <h2 className={styles.title}>{t("testPage.testing.choice")}</h2>
         <Task
           test={test}
           correctChoice={correctChoice}
@@ -77,7 +85,7 @@ export default function Testing({ numbers, maxRandomNumber, back }) {
         />
       </div>
       <button onClick={back} className={styles.button}>
-        Назад
+        {t("back")}
       </button>
     </motion.div>
   );

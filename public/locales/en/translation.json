@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "home": "Main",
+    "learning": "Learning",
+    "testing": "Testing"
+  },
+  "homePage": {
+    "title": "Welcome to the site dedicated to the multiplication table!",
+    "text": "Learning the multiplication tables is an important step in a child's education. Before you begin, watch the videos with recommendations. They may help you simplify the process of learning the multiplication tables."
+  },
+  "learningPage": {
+    "settings": {
+      "title": "Select the column you want to learn",
+      "column": "column by "
+    }
+  },
+  "testPage": {
+    "settings": {
+      "title": "Select the required table columns",
+      "by": "by",
+      "check": "Select all",
+      "uncheck": "Remove all",
+      "start": "Begin"
+    },
+    "testing": {
+      "stat": "Statistics",
+      "countQuestions": "Number of questions",
+      "countAnswers": "Number of correct answers",
+      "countPercents": "Percentage of correct answers",
+      "choice": "Choose the correct answer",
+      "correct": "That's right! Well done!",
+      "incorrect": "You're wrong! The correct answer is: {{correctAnswer}}"
+    }
+  },
+  "settings": "Settings",
+  "back": "Back"
+}

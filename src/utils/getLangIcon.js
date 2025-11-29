@@ -1,8 +1,11 @@
 import langIcons from "../data/langIcons";
 
 const getLangIcons = (lang) => {
-  const [{ icon }] = langIcons.filter((item) => item.lang === lang);
-  return icon;
+  if (lang) {
+    const [{ icon }] = langIcons.filter((item) => item.lang === lang);
+    return icon;
+  }
+  return;
 };
 
 export default getLangIcons;

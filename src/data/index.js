@@ -9,7 +9,6 @@ import eight from "./table/eight.js";
 import nine from "./table/nine.js";
 import ten from "./table/ten";
 
-import navItems from "./navItems.js";
 import homePageVideos from "./homePageVideos.js";
 import langIcons from "@/data/langIcons";
 
@@ -24,7 +23,6 @@ export {
   eight,
   nine,
   ten,
-  navItems,
   homePageVideos,
   langIcons,
 };

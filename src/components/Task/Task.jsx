@@ -31,7 +31,7 @@ export default function Task({ test = {}, wrongChoice, correctChoice }) {
     if (number === correctAnswer) {
       correctChoice();
     } else {
-      wrongChoice();
+      wrongChoice(correctAnswer);
     }
   };
   const elements = randomeAnswers.map((btn) => (

@@ -1,10 +1,12 @@
 import { motion } from "motion/react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import styles from "./SettingsTestPage.module.css";
 
 export default function SettingsTestPage({ settingsHandler }) {
   const [checkedNumbers, setCheckedNumbers] = useState([]);
   const [isAllChacked, setIsAllChacked] = useState(false);
+  const { t } = useTranslation();
   const allCheckedNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
   const isDisabled = checkedNumbers.length < 1;
 
@@ -43,8 +45,8 @@ export default function SettingsTestPage({ settingsHandler }) {
       transition={{ duration: 0.5 }}
       className={styles.container}
     >
-      <h2 className={styles.title}>Настройки:</h2>
-      <p className={styles.text}>Выберите необходимые столбцы таблицы:</p>
+      <h2 className={styles.title}>{t("settings")}:</h2>
+      <p className={styles.text}>{t("testPage.settings.title")}:</p>
 
       <form onSubmit={submitHandler} className={styles.form}>
         <div>
@@ -57,7 +59,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 name="number"
                 onChange={checkboxHandler}
               />
-              <span>на 1</span>
+              <span>{t("testPage.settings.by")} 1</span>
             </label>
             <label>
               <input
@@ -67,7 +69,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={2}
                 onChange={checkboxHandler}
               />
-              <span>на 2</span>
+              <span>{t("testPage.settings.by")} 2</span>
             </label>
             <label>
               <input
@@ -77,7 +79,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={3}
                 onChange={checkboxHandler}
               />
-              <span>на 3</span>
+              <span>{t("testPage.settings.by")} 3</span>
             </label>
             <label>
               <input
@@ -87,7 +89,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={4}
                 onChange={checkboxHandler}
               />
-              <span>на 4</span>
+              <span>{t("testPage.settings.by")} 4</span>
             </label>
             <label>
               <input
@@ -97,7 +99,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={5}
                 onChange={checkboxHandler}
               />
-              <span>на 5</span>
+              <span>{t("testPage.settings.by")} 5</span>
             </label>
           </div>
           <div className={styles.column}>
@@ -109,7 +111,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={6}
                 onChange={checkboxHandler}
               />
-              <span>на 6</span>
+              <span>{t("testPage.settings.by")} 6</span>
             </label>
             <label>
               <input
@@ -119,7 +121,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={7}
                 onChange={checkboxHandler}
               />
-              <span>на 7</span>
+              <span>{t("testPage.settings.by")} 7</span>
             </label>
             <label>
               <input
@@ -129,7 +131,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={8}
                 onChange={checkboxHandler}
               />
-              <span>на 8</span>
+              <span>{t("testPage.settings.by")} 8</span>
             </label>
             <label>
               <input
@@ -139,7 +141,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={9}
                 onChange={checkboxHandler}
               />
-              <span>на 9</span>
+              <span>{t("testPage.settings.by")} 9</span>
             </label>
             <label>
               <input
@@ -149,7 +151,7 @@ export default function SettingsTestPage({ settingsHandler }) {
                 value={10}
                 onChange={checkboxHandler}
               />
-              <span>на 10</span>
+              <span>{t("testPage.settings.by")} 10</span>
             </label>
           </div>
         </div>
@@ -161,7 +163,11 @@ export default function SettingsTestPage({ settingsHandler }) {
             value="all"
             onChange={allCheckboxHandler}
           />
-          <span>{isAllChacked ? "Снять все" : "Выбрать все"}</span>
+          <span>
+            {isAllChacked
+              ? t("testPage.settings.uncheck")
+              : t("testPage.settings.check")}
+          </span>
         </label>
 
         <button
@@ -170,7 +176,7 @@ export default function SettingsTestPage({ settingsHandler }) {
           style={{ cursor: isDisabled ? "not-allowed" : "pointer" }}
           className={styles.button}
         >
-          Начать
+          {t("testPage.settings.start")}
         </button>
       </form>
     </motion.div>

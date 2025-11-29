@@ -1,20 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, spring, AnimatePresence } from "motion/react";
+import { useTranslation } from "react-i18next";
 import langIcons from "@/data/langIcons";
 import getLangIcons from "@/utils/getLangIcon";
 import styles from "@/components/ChangeLangBtn/ChangeLangBtn.module.css";
 
 export default function ChangeLangBtn() {
   const [isOpen, setIsOpen] = useState(false);
-  const [lang, setLang] = useState("en");
+  const { i18n } = useTranslation();
+  const [lng, setLng] = useState(() => i18n.language);
+  let icon = getLangIcons(lng);
 
-  const icon = getLangIcons(lang);
-
-  const filteredIcons = langIcons.filter((item) => item.lang !== lang);
+  const filteredIcons = langIcons.filter((item) => item.lang !== lng);
 
   const changeLanguageHandler = (lang) => {
-    localStorage.setItem("lang", lang);
-    setLang(lang);
+    setIsOpen(false);
+    setLng(lang);
+    i18n.changeLanguage(lang);
   };
 
   const elements = filteredIcons.map(({ id, lang, icon }) => (
@@ -26,11 +28,10 @@ export default function ChangeLangBtn() {
       key={id}
       className={styles.item}
       onClick={() => {
-        setIsOpen(false);
         changeLanguageHandler(lang);
       }}
     >
-      <img src={icon} alt="lang icon" className={styles.icon} />
+      <img src={icon} alt="language icon" className={styles.icon} />
     </motion.li>
   ));
   return (
