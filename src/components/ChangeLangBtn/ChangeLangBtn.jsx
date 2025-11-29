@@ -9,7 +9,7 @@ export default function ChangeLangBtn() {
   const [isOpen, setIsOpen] = useState(false);
   const { i18n } = useTranslation();
   const [lng, setLng] = useState(() => i18n.language);
-  let icon = getLangIcons(lng);
+  const icon = getLangIcons(lng);
 
   const filteredIcons = langIcons.filter((item) => item.lang !== lng);
 
@@ -31,7 +31,7 @@ export default function ChangeLangBtn() {
         changeLanguageHandler(lang);
       }}
     >
-      <img src={icon} alt="language icon" className={styles.icon} />
+      <img src={icon} alt={`${lang} icon`} className={styles.icon} />
     </motion.li>
   ));
   return (
