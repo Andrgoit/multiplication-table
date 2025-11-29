@@ -3,7 +3,7 @@ import SoundContext from "./context";
 import { toast } from "react-toastify";
 
 export default function Provider({ children }) {
-  const [isSoundOn, setIsSoundOn] = useState(false);
+  const [isSoundOn, setIsSoundOn] = useState(true);
 
   useEffect(() => {
     const soundSetting = localStorage.getItem("notification-sound");
