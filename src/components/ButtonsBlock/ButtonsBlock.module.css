@@ -1,0 +1,11 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background: var(--background-gradient);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.8);
+  transition: var(--transition);
+}

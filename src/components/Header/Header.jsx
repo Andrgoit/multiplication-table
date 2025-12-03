@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
-import { Nav, SoundButton, ChangeLangBtn } from "@/components";
+import { Nav, ButtonsBlock, Logo, SettingsButton } from "@/components";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -21,10 +21,11 @@ export default function Header() {
     >
       <div className="container">
         <div className={styles.wrapper}>
+          <Logo />
           <Nav navItems={navItems} />
+          <SettingsButton />
           <div className={styles.btnwrapper}>
-            <SoundButton />
-            <ChangeLangBtn />
+            <ButtonsBlock />
           </div>
         </div>
       </div>

@@ -10,6 +10,10 @@ import SettingsLearningPage from "./SettingsLearningPage/SettingsLearningPage";
 import Learning from "./Learning/Learning";
 import VideoBlock from "./VideoBlock/VideoBlock";
 import ChangeLangBtn from "./ChangeLangBtn/ChangeLangBtn";
+import ThemeButton from "./ThemeButton/ThemeButton";
+import ButtonsBlock from "./ButtonsBlock/ButtonsBlock";
+import Logo from "./Logo/Logo";
+import SettingsButton from "./SettingsButton/SettingsButton";
 
 export {
   Footer,
@@ -24,4 +28,8 @@ export {
   Learning,
   VideoBlock,
   ChangeLangBtn,
+  ThemeButton,
+  ButtonsBlock,
+  Logo,
+  SettingsButton,
 };

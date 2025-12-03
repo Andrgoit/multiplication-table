@@ -4,7 +4,7 @@ import { Task } from "@/components";
 import { toast } from "react-toastify";
 
 import { useContext } from "react";
-import soundContext from "@/contexts/sound/context";
+import { SoundContext } from "@/contexts/sound/SoundProvider";
 
 import useSound from "use-sound";
 
@@ -17,7 +17,7 @@ import { useTranslation } from "react-i18next";
 export default function Testing({ numbers, maxRandomNumber, back }) {
   const [testsCount, setTestsCount] = useState(0);
   const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
-  const { isSoundOn } = useContext(soundContext);
+  const { isSoundOn } = useContext(SoundContext);
   const { t } = useTranslation();
 
   const percentCorrectAnswers = Math.ceil(

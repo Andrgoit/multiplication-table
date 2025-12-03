@@ -3,9 +3,13 @@
   font-weight: bold;
   font-size: 18px;
   margin-top: 20px;
+  color: var(--main-text-color);
+  transition: var(--transition);
 }
 
 .text {
   text-align: center;
   margin-top: 20px;
+  color: var(--main-text-color);
+  transition: var(--transition);
 }

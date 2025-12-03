@@ -1,27 +1,19 @@
-.container {
+.buttonwrapper {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
   padding: 5px;
+  border-radius: 10px;
   background: var(--background-gradient);
   border: 1px solid #c5c5c5;
-  border-radius: 10px;
-  backdrop-filter: blur(5px);
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
   color: var(--main-text-color);
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: var(--transition);
 }
 
-.container:hover {
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.6),
-    rgba(255, 255, 255, 0.6)
-  );
-}
-
-.container:active {
+.buttonwrapper:active {
   scale: 0.9;
 }

@@ -16,7 +16,7 @@ export default function Nav({ navItems = [] }) {
   ));
 
   return (
-    <nav>
+    <nav className={styles.nav}>
       <ul className={styles.navList}>{elements}</ul>
     </nav>
   );

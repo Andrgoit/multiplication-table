@@ -1,18 +1,18 @@
-import { BiVolumeFull, BiVolumeMute } from "react-icons/bi";
+import { GoUnmute, GoMute } from "react-icons/go";
 import { useContext } from "react";
-import soundContext from "@/contexts/sound/context";
+import { SoundContext } from "@/contexts/sound/SoundProvider";
 
 import styles from "./SoundButton.module.css";
 
 export default function SoundButton() {
-  const { isSoundOn, soundToggler } = useContext(soundContext);
+  const { isSoundOn, soundToggler } = useContext(SoundContext);
 
   return (
     <div onClick={soundToggler} className={styles.container}>
       {isSoundOn ? (
-        <BiVolumeFull size={26} color="#00da00" />
+        <GoUnmute size={26} color="#00da00" />
       ) : (
-        <BiVolumeMute size={26} />
+        <GoMute size={26} />
       )}
     </div>
   );

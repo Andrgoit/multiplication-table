@@ -15,6 +15,7 @@
   display: flex;
   gap: 5px;
   font-size: 28px;
+  color: var(--main-text-color);
 }
 
 @media (min-width: 768px) {
@@ -36,9 +37,10 @@
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 3px;
-  background-color: white;
-  transition: background-color 0.3s ease-in-out;
+  background: var(--background-gradient);
+  transition: var(--transition);
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
+  color: var(--main-text-color);
 }
 
 .button:hover {

@@ -10,6 +10,11 @@
 .title {
   font-weight: bold;
   font-size: 18px;
+  color: var(--main-text-color);
+}
+.text {
+  font-size: 16px;
+  color: var(--main-text-color);
 }
 
 .list {
@@ -25,9 +30,9 @@
   font-size: 16px;
   padding: 3px;
   cursor: pointer;
-  border: 1px solid #ecebeb;
+  border: 1px solid var(--main-text-color);
   border-radius: 3px;
-  background-color: white;
+  background-color: var(--background-gradient);
   transition: background-color 0.3s ease-in-out;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
 }

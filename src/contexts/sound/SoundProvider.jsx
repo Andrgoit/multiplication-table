@@ -1,8 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
-import SoundContext from "./context";
+import { useEffect, useState } from "react";
+// import SoundContext from "./context";
+import { createContext } from "react";
 import { toast } from "react-toastify";
 
-export default function Provider({ children }) {
+export const SoundContext = createContext();
+
+export default function SoundProvider({ children }) {
   const [isSoundOn, setIsSoundOn] = useState(true);
 
   useEffect(() => {
@@ -31,12 +34,8 @@ export default function Provider({ children }) {
     });
   };
 
-  const soundProviderValue = useMemo(() => {
-    return { isSoundOn, soundToggler };
-  }, [isSoundOn]);
-
   return (
-    <SoundContext.Provider value={soundProviderValue}>
+    <SoundContext.Provider value={{ isSoundOn, soundToggler }}>
       {children}
     </SoundContext.Provider>
   );

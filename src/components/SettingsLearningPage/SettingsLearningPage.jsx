@@ -43,7 +43,7 @@ export default function SettingsLearningPage({ selecedNumber }) {
       className={styles.container}
     >
       <h2 className={styles.title}>{t("settings")}:</h2>
-      <p>{t("learningPage.settings.title")}:</p>
+      <p className={styles.text}>{t("learningPage.settings.title")}:</p>
 
       <ul className={styles.list}>{elements}</ul>
     </motion.div>

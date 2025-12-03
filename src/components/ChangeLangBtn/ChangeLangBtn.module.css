@@ -1,5 +1,7 @@
 .list {
   position: absolute;
+  right: 0;
+  top: 35px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -9,7 +11,7 @@
   width: 48px;
   height: 48px;
   cursor: pointer;
-  /* box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6); */
+
   filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.6));
 }
 .icon {
@@ -17,8 +19,18 @@
 }
 
 .wrapper {
-  width: 48px;
-  height: 48px;
+  width: 30px;
+  height: 30px;
   position: relative;
   cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
+  transition: var(--transition);
+  background: var(--background-gradient);
+  border: 1px solid #c5c5c5;
+}
+
+.wrapper:active {
+  scale: 0.9;
 }
