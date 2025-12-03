@@ -33,7 +33,8 @@
   border: 1px solid var(--main-text-color);
   border-radius: 3px;
   background-color: var(--background-gradient);
-  transition: background-color 0.3s ease-in-out;
+  color: var(--main-text-color);
+  transition: var(--transition);
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
