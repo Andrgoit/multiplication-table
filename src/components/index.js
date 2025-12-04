@@ -14,6 +14,7 @@ import ThemeButton from "./ThemeButton/ThemeButton";
 import ButtonsBlock from "./ButtonsBlock/ButtonsBlock";
 import Logo from "./Logo/Logo";
 import SettingsButton from "./SettingsButton/SettingsButton";
+import Modal from "./Modal/Modal";
 
 export {
   Footer,
@@ -32,4 +33,5 @@ export {
   ButtonsBlock,
   Logo,
   SettingsButton,
+  Modal,
 };
