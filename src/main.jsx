@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router";
 import { ToastContainer, Bounce } from "react-toastify";
 import App from "./App.jsx";
+import { Loader } from "@/components/";
 import SoundProvider from "@/contexts/sound/SoundProvider.jsx";
 import ThemeProvider from "./contexts/theme/ThemeProvider.jsx";
 import "./index.css";
@@ -12,7 +13,7 @@ createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <SoundProvider>
       <ThemeProvider>
-        <Suspense fallback="...loading">
+        <Suspense fallback={<Loader />}>
           <App />
         </Suspense>
       </ThemeProvider>

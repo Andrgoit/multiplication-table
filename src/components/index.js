@@ -15,6 +15,7 @@ import ButtonsBlock from "./ButtonsBlock/ButtonsBlock";
 import Logo from "./Logo/Logo";
 import SettingsButton from "./SettingsButton/SettingsButton";
 import Modal from "./Modal/Modal";
+import Loader from "./Loader/Loader";
 
 export {
   Footer,
@@ -34,4 +35,5 @@ export {
   Logo,
   SettingsButton,
   Modal,
+  Loader,
 };
